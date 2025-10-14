@@ -1,0 +1,209 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+%\usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape Jacob Monck} \\ \vspace{1pt}
+    \small 703-687-2887 $|$ \href{jacob@monck.dev}{\underline{jacob@monck.dev}} $|$ 
+    \href{https://linkedin.com/in/jacobmonck}{\underline{linkedin.com/in/\textbf{jacobmonck}}} $|$
+    \href{https://github.com/jacobmonck}{\underline{github.com/\textbf{jacobmonck}}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {James Madison University}{Harrisonburg, VA}
+      {Bachelor of Science in Computer Science}{Aug. 2025 -- May 2028 (Expected)}
+    \resumeSubheading
+      {Northern Virginia Community College}{Ashburn, VA}
+      {Associate's in Computer Science}{Aug. 2024 -- Aug. 2025}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {DevOps Engineer}{June 2020 -- August 2023}
+      {Python Discord}{Remote}
+      \resumeItemListStart
+        \resumeItem{Managed Kubernetes clusters to orchestrate Django applications, Discord bots, and supporting services. Ensuring high availability and stability for 400,000+ community members}
+        \resumeItem{Implemented monitoring, logging, and alerting with Prometheus, Grafana, and Loki to proactively detect performance degradation and potential outages}
+        \resumeItem{Introduced disaster recovery and backup strategies for critical services and databases}
+      \resumeItemListEnd
+      
+% -----------Multiple Positions Heading-----------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+    \resumeSubheading
+      {Senior Backend Developer (Real-time Systems)}{July 2024 -- May 2025}
+      {Propel Labs}{Remote (Paris, France)}
+      \resumeItemListStart
+        \resumeItem{Implemented JWT-based authentication with refresh tokens in Fiber using Gorm, providing secure, stateless identity management across services}
+        \resumeItem{Developed RESTful API endpoints with robust validation, versioning, and OpenAPI documentation for external integrations}
+        \resumeItem{Engineered a globally distributed, multi-cloud Kubernetes cluster leveraging a hybrid-cloud architecture to deploy and scale customer services with regional redundancy, automatic failover, and traffic-aware load balancing}
+        \resumeItem{Architected a modular repository–service–handler pattern for high cohesion and low coupling, enabling rapid development in the monolith API}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Calico} $|$ \emph{Python, Discord.py, Metabase, PostgreSQL, Docker}}{June 2022 -- June 2022}
+          \resumeItemListStart
+            \resumeItem{Developed an advanced metrics-collection and data-processing too tailored for large online communities (500,000+ members), enabling real-time analytics of user engagement and community health}
+            \resumeItem{Engineered modules for tracking reaction statistics, message volumes, member counts, and automated community synchronization}
+            \resumeItem{Containerized the entire system using Docker Compose, integrating a Postgres database backend and Metabase for analytics dashboards}
+            \resumeItem{Open-sourced the project (Elastic License 2.0), demonstrating transparency}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{PikaID - Distributed ID Generation System} $|$ \emph{Go}}{Oct 2025 -- Oct 2025}
+          \resumeItemListStart
+            \resumeItem{Designed an implemented a high-throughput, globally unique ID generator based off of Stripe's architecture, written in Go and optimized for multi-node environments}
+            \resumeItem{Engineered a timestamp-based core allocator with sub-stream masking to ensure ordered, collision-free ID creation at microsecond precision}
+            \resumeItem{Developed an 
+            EmitterMux abstraction layer enabling concurrent, lazy emitter initialization using sync.Map for tread-safe scalability to allow for multiple prefixes on the same core allocator}
+            \resumeItem{Integrated a Redis-backed node provider for distributed node coordination, ensuring fault tolerance and persistence across service restarts}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages (In Order of Proficiency)}{: Python, SQL,  Go, Java, C, JaveScript(TypeScript)} \\
+     \textbf{Libraries}{: FastAPI, Django, NextJS, PyTest, Discord.py, Numpy, Fiber} \\
+     \textbf{Developer Tools}{: Git, Docker, GCP/AWS, VS Code, IntelliJ} \\
+     \textbf{Technologies}{: Kubernetes, RabbitMQ, Grafana, Metabase, Prometheus, Redis, Postgres, Github CI and CD } \\
+     }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
+~
